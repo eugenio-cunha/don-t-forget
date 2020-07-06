@@ -23,5 +23,18 @@ remova o #
 sudo vim /etc/docker/daemon.json
 
 {
-    "dns": ["8.8.8.8", "8.8.4.4"]
+    "dns": ["10.0.0.2", "8.8.8.8"]
 }
+sudo systemctl restart docker
+
+ip addr show
+
+sudo firewall-cmd --get-zone-of-interface= _interface_name_here_
+
+sudo firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent
+sudo firewall-cmd --reload
+sudo systemctl restart docker
+
+//test
+docker run busybox nslookup google.com
+```

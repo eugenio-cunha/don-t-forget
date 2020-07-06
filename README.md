@@ -16,3 +16,12 @@ remova o #
 ...
 
 ```
+
+## Fix DNS Docker
+
+```sh
+sudo vim /etc/docker/daemon.json
+
+{
+    "dns": ["8.8.8.8", "8.8.4.4"]
+}

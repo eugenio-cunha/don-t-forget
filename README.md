@@ -38,3 +38,10 @@ sudo systemctl restart docker
 //test
 docker run busybox nslookup google.com
 ```
+
+## Fix cgroup Fedora Docker
+
+```sh
+sudo dnf install grubby
+sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+```

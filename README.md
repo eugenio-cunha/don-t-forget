@@ -45,3 +45,9 @@ docker run busybox nslookup google.com
 sudo dnf install grubby
 sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 ```
+
+## SDK Android
+
+```sh
+/home/&{USER}/Android/Sdk/cmdline-tools/tools
+```

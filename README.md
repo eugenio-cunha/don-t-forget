@@ -51,3 +51,8 @@ sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 ```sh
 /home/&{USER}/Android/Sdk/cmdline-tools/tools
 ```
+
+## Restore Mongodb 
+```sh
+docker run --rm -v ~/Documents/dump:/dump mongo mongorestore --host 172.17.0.2:27017 /dump
+```

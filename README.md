@@ -55,4 +55,7 @@ sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 ## Restore Mongodb 
 ```sh
 docker run --rm -v ~/Documents/dump:/dump mongo mongorestore --host 172.17.0.2:27017 /dump
+
+# Exemplo
+docker run --rm -v /home/user_name/Document/dump:/dump mongo mongorestore --host _ip_container:27017 --gzip --archive=dump/database_name.zip
 ```

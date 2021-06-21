@@ -59,3 +59,18 @@ docker run --rm -v ~/Documents/dump:/dump mongo mongorestore --host 172.17.0.2:2
 # Exemplo
 docker run --rm -v /home/user_name/Document/dump:/dump mongo mongorestore --host _ip_container:27017 --gzip --archive=dump/database_name.zip
 ```
+
+## Pesquisar arquivos acima de N MB
+```sh
+sudo find / -type f -size +10M -exec ls -lh {} \;
+```
+
+## Logs do sistema
+```sh
+du -h /var/log/journal
+journalctl --disk-usage
+sudo journalctl --vacuum-size=300M
+```
+
+
+
